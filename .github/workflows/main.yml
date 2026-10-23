@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-13
     steps:
     - name: Checkout Code
       uses: actions/checkout@v3
@@ -15,8 +15,8 @@ jobs:
     - name: Install Theos
       run: |
         export THEOS=$HOME/theos
-        git clone --recursive https://github.com/theos/theos.git $ KTHEOSéo
-        sudo $THEOS/bin xu/nic.pl <<< "13" || true
+        git clone --recursive https://github.com/theos/theos.git $THEOS
+        sudo $THEOS/bin/nic.pl <<< "13" || true
 
     - name: Build Tweak
       run: |
